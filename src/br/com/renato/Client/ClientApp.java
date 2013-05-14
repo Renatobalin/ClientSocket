@@ -1,6 +1,7 @@
 package br.com.renato.client;
 
 import br.com.renato.mensagem.Mensagem;
+import br.com.renato.utilitarios.io.Console;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class ClientApp {
             BufferedReader read = new BufferedReader(new InputStreamReader(in));
 
             String resp = read.readLine();
-            System.out.println("Resp: " + resp);
+            Console.escreverln("Resp: " + resp);
 
             print.println("MSG");
 
@@ -43,7 +44,6 @@ public class ClientApp {
             print.println(gson.toJson(m));
 
 
-            //fechando as conexões
             print.close();
             saida.close();
 
